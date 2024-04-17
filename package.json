@@ -1,10 +1,15 @@
 {
   "name": "symfa-cv-templates",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CV templates module",
   "main": "index.js",
   "author": "Symfa",
   "license": "ISC",
+  "git repository": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vladbairash/symfa-cv-templates.git"
+  },
   "dependencies": {
     "handlebars": "^4.7.8"
   }
