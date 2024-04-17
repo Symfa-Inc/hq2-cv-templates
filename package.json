@@ -1,0 +1,11 @@
+{
+  "name": "symfa-cv-templates",
+  "version": "1.0.0",
+  "description": "CV templates module",
+  "main": "index.js",
+  "author": "Symfa",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.7.8"
+  }
+}
