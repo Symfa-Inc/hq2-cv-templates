@@ -319,4 +319,4 @@ const template = `<html lang='en'>
 </body>
 </html>`;
 
-export {template}
+module.exports = {template};
