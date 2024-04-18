@@ -1,6 +1,6 @@
 {
   "name": "symfa-cv-templates",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "CV templates module",
   "module": "index.mjs",
   "type": "module",
