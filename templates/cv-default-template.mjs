@@ -1,4 +1,4 @@
-<html lang='en'>
+const template = `<html lang='en'>
 <head>
   <meta charset='UTF-8' />
   <title>Document</title>
@@ -317,4 +317,6 @@
   </div>
 {{/isActiveItems}}
 </body>
-</html>
+</html>`;
+
+export {template}
