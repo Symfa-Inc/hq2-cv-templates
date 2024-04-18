@@ -1,9 +1,9 @@
 {
   "name": "symfa-cv-templates",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "CV templates module",
-  "main": "index.mjs",
-  "type": "module",
+  "main": "index.js",
+  "module": "index.mjs",
   "author": "Symfa",
   "license": "ISC",
   "git repository": "ISC",
