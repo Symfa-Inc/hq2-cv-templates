@@ -1,5 +1,5 @@
 import handlebars from 'handlebars';
-import {template} from './templates/cv-default-template.js';
+import {template} from '../templates/cv-default-template.ts';
 
 handlebars.registerHelper('isActiveItems', function (context, options) {
     if (!context || !context.length) {

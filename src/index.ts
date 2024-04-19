@@ -1,34 +1,36 @@
 import handlebars from 'handlebars';
-import { template } from './templates/cv-default-template';
+import defaultTemplate from '../templates/cv-default-template';
 
-handlebars.registerHelper('isActiveItems', function(context, options) {
+handlebars.registerHelper('isActiveItems', function(this: unknown, context, options) {
   if (!context || !context.length) {
-    // @ts-ignore
     return options.inverse(this);
   }
 
   for (let i = 0; i < context.length; i++) {
     if (context[i].active) {
-      // @ts-ignore
       return options.fn(this);
     }
   }
-// @ts-ignore
   return options.inverse(this);
 });
 
-handlebars.registerHelper('ifMultiCondition', function(v1, v2, options) {
+handlebars.registerHelper('ifMultiCondition', function(this: unknown, v1, v2, options) {
   if (v1 && v2) {
-    // @ts-ignore
     return options.fn(this);
   }
-  // @ts-ignore
   return options.inverse(this);
 });
 
-function getHTMLTemplate(params: unknown) {
-  return handlebars.compile(template)(params);
+
+enum Templates {
+  Default,
 }
 
-export { getHTMLTemplate };
+const templatesMapper: {[key in Templates]: string} = { [Templates.Default]: defaultTemplate};
+
+function getHTMLTemplate(params: unknown, template: Templates) {
+  return handlebars.compile(templatesMapper[template])(params);
+}
+
+export { getHTMLTemplate, Templates };
 

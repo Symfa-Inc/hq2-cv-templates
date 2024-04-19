@@ -1,8 +1,30 @@
-const template = `<html lang='en'>
+export default `
+<html lang='en'>
 <head>
   <meta charset='UTF-8' />
-  <title>Document</title>
+  <title>CV Default Template</title>
   <style>
+    .cv-template {
+      width: 210mm; 
+      min-height: 297mm; 
+      font-family: Helvetica; 
+      color: rgb(25, 25, 25); 
+      background-color: white; 
+      padding-bottom: 1px;
+    }
+    
+    .cv-template-header {
+      position: relative;
+    }
+
+    .cv-template-header__image {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      height: 192px;
+      width: 192px;
+    }
+  
     .cv-template-header__image img {
       display: block;
       max-width: 100%;
@@ -162,10 +184,10 @@ const template = `<html lang='en'>
   </style>
 </head>
 <body style="margin: 0">
-<div style="width: 210mm; min-height: 297mm; font-family: Helvetica; color: rgb(25, 25, 25); background-color: white; padding-bottom: 1px">
-<div style="position: relative">
+<div class="cv-template">
+<div class="cv-template-header">
   {{#if preparedPhoto}}
-    <div style="position: absolute; top: 18px; left: 18px; height: 192px; width: 192px;">
+    <div class="cv-template-header__image">
       <img src='{{preparedPhoto}}' alt='{{employeeName}}' />
     </div>
   {{/if}}
@@ -300,5 +322,3 @@ const template = `<html lang='en'>
 </div>
 </body>
 </html>`;
-
-module.exports = {template};

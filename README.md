@@ -1,3 +1,5 @@
 ## Symfa CV Templates
 
-use getHTMLTemplate for getting a template;
+run "build" for typescript compile.
+
+run yarn/npm link for local testing.

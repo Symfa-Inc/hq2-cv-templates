@@ -37,11 +37,33 @@ module.exports = __toCommonJS(src_exports);
 var import_handlebars = __toESM(require("handlebars"));
 
 // templates/cv-default-template.ts
-var defaultTemplate = `<html lang='en'>
+var cv_default_template_default = `
+<html lang='en'>
 <head>
   <meta charset='UTF-8' />
-  <title>Document</title>
+  <title>CV Default Template</title>
   <style>
+    .cv-template {
+      width: 210mm; 
+      min-height: 297mm; 
+      font-family: Helvetica; 
+      color: rgb(25, 25, 25); 
+      background-color: white; 
+      padding-bottom: 1px;
+    }
+    
+    .cv-template-header {
+      position: relative;
+    }
+
+    .cv-template-header__image {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      height: 192px;
+      width: 192px;
+    }
+  
     .cv-template-header__image img {
       display: block;
       max-width: 100%;
@@ -201,10 +223,10 @@ var defaultTemplate = `<html lang='en'>
   </style>
 </head>
 <body style="margin: 0">
-<div style="width: 210mm; min-height: 297mm; font-family: Helvetica; color: rgb(25, 25, 25); background-color: white; padding-bottom: 1px">
-<div style="position: relative">
+<div class="cv-template">
+<div class="cv-template-header">
   {{#if preparedPhoto}}
-    <div style="position: absolute; top: 18px; left: 18px; height: 192px; width: 192px;">
+    <div class="cv-template-header__image">
       <img src='{{preparedPhoto}}' alt='{{employeeName}}' />
     </div>
   {{/if}}
@@ -362,7 +384,7 @@ var Templates = /* @__PURE__ */ ((Templates2) => {
   Templates2[Templates2["Default"] = 0] = "Default";
   return Templates2;
 })(Templates || {});
-var templatesMapper = { [0 /* Default */]: defaultTemplate };
+var templatesMapper = { [0 /* Default */]: cv_default_template_default };
 function getHTMLTemplate(params, template) {
   return import_handlebars.default.compile(templatesMapper[template])(params);
 }
