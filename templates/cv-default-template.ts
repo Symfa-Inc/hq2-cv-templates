@@ -145,10 +145,6 @@ export default `
       gap: 30px;
     }
 
-    .cv-template-block__list_experience {
-      display: block;
-    }
-
     .cv-template-block__item {
       border: 1px solid rgb(133, 133, 133);
       padding: 5px 8px;
