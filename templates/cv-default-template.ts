@@ -191,16 +191,16 @@ export default `
     <div class='cv-template-header__personal' style="min-height: 70px">
       <div class='cv-template-header__name'>
         {{#if employeeFirstNameActive}}
-          <span>{{employeeFirstName}}</span>
+          {{employeeFirstName}}
         {{/if}}
         {{#if employeeLastNameActive}}
-          <span>&nbsp;{{employeeLastName}}</span>
+          {{employeeLastName}}
         {{/if}}
       </div>
       <div class='cv-template-header__position'>{{positionName}}</div>
     </div>
     {{#ifMultiCondition isLogo logo}}
-      <a href="{{companyUrl}}">
+      <a href="{{companyUrl}}" target="_blank">
         <img src='{{logo}}' alt='logo' />
       </a>
     {{/ifMultiCondition}}
