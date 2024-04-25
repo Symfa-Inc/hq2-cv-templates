@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build:
+  build_and_publish:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,25 +24,14 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Pack
+      - name: Pack the lib
         run: npm pack
 
       - name: Authenticate with npm registry
         run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 
-  publish:
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Publish to NPM
         run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${NPM_TOKEN}
 
       - name: Create and push git tag
         run: |
@@ -50,5 +39,6 @@ jobs:
           git config --local user.name "GitHub Action"
           git tag -a v$(node -p "require('./package.json').version") -m "Release v$(node -p "require('./package.json').version")"
           git push origin --tags
+
 env:
-  NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
