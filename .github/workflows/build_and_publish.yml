@@ -7,6 +7,7 @@ on:
 
 jobs:
   build_and_publish:
+    if: github.event_name != 'workflow_dispatch'
     runs-on: ubuntu-latest
 
     steps:
@@ -33,12 +34,13 @@ jobs:
       - name: Publish to NPM
         run: npm publish
 
-      - name: Create and push git tag
+      - name: Create and push updated pkg version
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git tag -a v$(node -p "require('./package.json').version") -m "Release v$(node -p "require('./package.json').version")"
-          git push origin --tags
+          git add package.json
+          git commit -m "Bump version"
+          git push origin master
 
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
