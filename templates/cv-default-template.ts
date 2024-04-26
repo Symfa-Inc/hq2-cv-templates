@@ -153,9 +153,13 @@ export default `
     }
 
     .cv-template-block-language {
-      min-width: 60px;
       display: flex;
       flex-direction: column;
+      row-gap: 10px;
+    }
+    
+    .cv-template-block-language__item {
+      display: flex;
       align-items: center;
     }
 
@@ -303,12 +307,11 @@ export default `
 {{#isActiveItems languages}}
   <div class='cv-template-block'>
     <div class='cv-template-block__name'>Languages</div>
-    <div class='cv-template-block__list block__list_language'>
+    <div class='cv-template-block-language'>
       {{#each languages}}
         {{#if this.active}}
-          <div class='cv-template-block-language'>
-            <div class='cv-template-block-language__level'>{{this.level}}</div>
-            <div class='cv-template-block-language__name'>{{this.language}}</div>
+          <div class='cv-template-block-language__item'>
+            {{this.language}}{{#ifNot this.level 'Hidden'}} — {{this.level}}{{/ifNot}}
           </div>
         {{/if}}
       {{/each}}

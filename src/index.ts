@@ -21,6 +21,12 @@ handlebars.registerHelper('ifMultiCondition', function(this: unknown, v1, v2, op
   return options.inverse(this);
 });
 
+handlebars.registerHelper('ifNot', function(this: unknown, v1, v2, options) {
+  if (v1 !== v2) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
 
 enum Templates {
   Default,
