@@ -232,18 +232,19 @@ export default `
   {{/if}}
 {{/if}}
 
-{{#if skills.active}}
-  {{#if skills.items.length}}
-    <div class='cv-template-block'>
-      <div class='cv-template-block__name'>Technical skills</div>
+{{#isActiveItems skills}}
+  <div class='cv-template-block'>
+    <div class='cv-template-block__name'>Technologies and Tools</div>
+    {{#each skills}}
+      <div class='cv-template-block__subname'>{{this.skillFamily}}</div>
       <div class='cv-template-block__list'>
-        {{#each skills.items}}
-          <div class='cv-template-block__item'>{{this.skillName}}</div>
+        {{#each this.skillName}}
+          <div class='cv-template-block__item'>{{this}}</div>
         {{/each}}
       </div>
-    </div>
-  {{/if}}
-{{/if}}
+    {{/each}}
+  </div>
+{{/isActiveItems}}
 
 {{#isActiveItems experiences}}
   <div class='cv-template-block'>
