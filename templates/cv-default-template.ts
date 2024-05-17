@@ -241,12 +241,14 @@ export default `
   <div class='cv-template-block'>
     <div class='cv-template-block__name'>Technologies and Tools</div>
     {{#each skills}}
-      <div class='cv-template-block__subname'>{{this.skillFamily}}</div>
-      <div class='cv-template-block__list'>
-        {{#each this.skillName}}
-          <div class='cv-template-block__item'>{{this}}</div>
-        {{/each}}
-      </div>
+      {{#if this.active}}
+        <div class='cv-template-block__subname'>{{this.skillFamily}}</div>
+        <div class='cv-template-block__list'>
+          {{#each this.skillName}}
+            <div class='cv-template-block__item'>{{this}}</div>
+          {{/each}}
+        </div>
+      {{/if}}
     {{/each}}
   </div>
 {{/isActiveItems}}
