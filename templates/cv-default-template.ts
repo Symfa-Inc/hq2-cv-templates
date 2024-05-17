@@ -126,6 +126,11 @@ export default `
       }
     }
 
+    .cv-template-block__subname {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
     .cv-template-block__name {
       font-size: 18px;
       font-weight: bold;
@@ -232,18 +237,21 @@ export default `
   {{/if}}
 {{/if}}
 
-{{#if skills.active}}
-  {{#if skills.items.length}}
-    <div class='cv-template-block'>
-      <div class='cv-template-block__name'>Technical skills</div>
-      <div class='cv-template-block__list'>
-        {{#each skills.items}}
-          <div class='cv-template-block__item'>{{this.skillName}}</div>
-        {{/each}}
-      </div>
-    </div>
-  {{/if}}
-{{/if}}
+{{#isActiveItems skills}}
+  <div class='cv-template-block'>
+    <div class='cv-template-block__name'>Technologies and Tools</div>
+    {{#each skills}}
+      {{#if this.active}}
+        <div class='cv-template-block__subname'>{{this.skillFamily}}</div>
+        <div class='cv-template-block__list'>
+          {{#each this.skillName}}
+            <div class='cv-template-block__item'>{{this}}</div>
+          {{/each}}
+        </div>
+      {{/if}}
+    {{/each}}
+  </div>
+{{/isActiveItems}}
 
 {{#isActiveItems experiences}}
   <div class='cv-template-block'>
