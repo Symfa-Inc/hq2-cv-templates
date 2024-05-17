@@ -126,6 +126,11 @@ export default `
       }
     }
 
+    .cv-template-block__subname {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
     .cv-template-block__name {
       font-size: 18px;
       font-weight: bold;
