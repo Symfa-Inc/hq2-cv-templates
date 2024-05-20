@@ -1,7 +1,9 @@
 import handlebars from 'handlebars';
 import defaultTemplate from '../templates/cv-default-template';
 
-handlebars.registerHelper('isActiveItems', function(this: unknown, context, field, options) {
+handlebars.registerHelper('isActiveItems', function(this: unknown, context, field) {
+  const options = arguments[arguments.length - 1];
+
   if (!context || !context.length) {
     return options.inverse(this);
   }
