@@ -6,12 +6,12 @@ handlebars.registerHelper('isActiveItems', function(this: unknown, context, opti
     return options.inverse(this);
   }
 
-  const field = options.hash.subItems || null;
+  const subItemsField = options.hash.subItems || null;
 
   for (let i = 0; i < context.length; i++) {
     if (context[i].active) {
-      if (field) {
-        if (Array.isArray(context[i][field]) && context[i][field].length) {
+      if (subItemsField) {
+        if (Array.isArray(context[i][subItemsField]) && context[i][subItemsField].length) {
           return options.fn(this);
         }
       } else {
