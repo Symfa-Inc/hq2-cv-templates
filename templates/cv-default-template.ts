@@ -127,8 +127,9 @@ export default `
     }
 
     .cv-template-block__subname {
+      font-size: 14px;;
       font-weight: bold;
-      margin: 10px 0;
+      margin: 14px 0 8px;
     }
 
     .cv-template-block__name {
@@ -237,7 +238,7 @@ export default `
   {{/if}}
 {{/if}}
 
-{{#isActiveItems skills 'skillName'}}
+{{#isActiveItems skills subItemsField='skillName'}}
   <div class='cv-template-block'>
     <div class='cv-template-block__name'>Technologies and Tools</div>
     {{#each skills}}
