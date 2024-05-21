@@ -1,12 +1,12 @@
 import handlebars from 'handlebars';
 import defaultTemplate from '../templates/cv-default-template';
 
-handlebars.registerHelper('isActiveItems', function(this: unknown, context, field) {
-  const options = arguments[arguments.length - 1];
-
+handlebars.registerHelper('isActiveItems', function(this: unknown, context, options) {
   if (!context || !context.length) {
     return options.inverse(this);
   }
+
+  const field = options.hash.subItems || null;
 
   for (let i = 0; i < context.length; i++) {
     if (context[i].active) {
