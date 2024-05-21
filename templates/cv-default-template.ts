@@ -127,8 +127,9 @@ export default `
     }
 
     .cv-template-block__subname {
+      font-size: 14px;;
       font-weight: bold;
-      margin: 10px 0;
+      margin: 14px 0 8px;
     }
 
     .cv-template-block__name {
