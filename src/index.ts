@@ -6,7 +6,7 @@ handlebars.registerHelper('isActiveItems', function(this: unknown, context, opti
     return options.inverse(this);
   }
 
-  const subItemsField = options.hash.subItems || null;
+  const subItemsField = options.hash.subItemsField || null;
 
   for (let i = 0; i < context.length; i++) {
     if (context[i].active) {

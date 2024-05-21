@@ -237,7 +237,7 @@ export default `
   {{/if}}
 {{/if}}
 
-{{#isActiveItems skills subItems='skillName'}}
+{{#isActiveItems skills subItemsField='skillName'}}
   <div class='cv-template-block'>
     <div class='cv-template-block__name'>Technologies and Tools</div>
     {{#each skills}}
