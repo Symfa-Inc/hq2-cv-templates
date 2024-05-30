@@ -293,6 +293,17 @@ export default `
   {{/if}}
 {{/if}}
 
+{{#if publications.active}}
+  {{#if publications.description}}
+    <div class='cv-template-block'>
+      <div class='cv-template-block__name'>Publications</div>
+      <div class='cv-template-block__desc'>
+        <div class='cv-template-block-style'>{{{publications.description}}}</div>
+      </div>
+    </div>
+  {{/if}}
+{{/if}}
+
 {{#if courses.active}}
   {{#if courses.description}}
     <div class='cv-template-block'>
@@ -329,6 +340,17 @@ export default `
     </div>
   </div>
 {{/isActiveItems}}
+
+{{#if timezones.active}}
+  {{#if timezones.description}}
+    <div class='cv-template-block'>
+      <div class='cv-template-block__name'>Time Zone</div>
+      <div class='cv-template-block__desc'>
+        <div class='cv-template-block-style'>{{{timezones.description}}}</div>
+      </div>
+    </div>
+  {{/if}}
+{{/if}}
 </div>
 </body>
 </html>`;
