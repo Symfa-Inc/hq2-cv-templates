@@ -20,7 +20,7 @@ export default `
     .cv-template-header__image {
       position: absolute;
       top: 18px;
-      left: 18px;
+      left: 35px;
       height: 192px;
       width: 192px;
     }
@@ -32,14 +32,14 @@ export default `
     }
 
     .cv-template-header__image ~ .cv-template-header__top, .cv-template-header__image ~ .cv-template-header__bottom {
-      padding-left: 244px;
+      padding-left: 262px;
     }
 
     .cv-template-header__top {
       background: #00524e;
       color: rgb(246,
       246, 246);
-      padding: 15px 34px 15px 18px;
+      padding: 15px 35px 15px 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -57,7 +57,7 @@ export default `
       border-top: 1px solid #e3eae3;
       border-bottom: 1px solid #e3eae3;
       background: #e3eae3;
-      padding: 0 34px 0 18px;
+      padding: 0 35px 0 18px;
       min-height: 130px;
 
       .block-style {
@@ -87,14 +87,15 @@ export default `
 
     .cv-template-block {
       margin: 35px 0;
-      padding: 0 18px;
+      padding: 0 35px;
     }
 
     .cv-template-block-style {
       white-space: pre-wrap;
       font-size: 14px;
 
-      > p {
+      > p,
+      > table {
         margin: 1em 0;
       }
 
@@ -162,6 +163,7 @@ export default `
       display: flex;
       flex-direction: column;
       row-gap: 10px;
+      font-size: 14px;
     }
     
     .cv-template-block-language__item {
