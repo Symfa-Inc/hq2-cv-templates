@@ -20,7 +20,7 @@ export default `
     .cv-template-header__image {
       position: absolute;
       top: 18px;
-      left: 35px;
+      left: 54px;
       height: 192px;
       width: 192px;
       border-radius: 50%;
@@ -34,14 +34,14 @@ export default `
     }
 
     .cv-template-header__image ~ .cv-template-header__top, .cv-template-header__image ~ .cv-template-header__bottom {
-      padding-left: 262px;
+      padding-left: 300px;
     }
 
     .cv-template-header__top {
       background: #00524e;
       color: rgb(246,
       246, 246);
-      padding: 0 35px 0 18px;
+      padding: 0 54px 0 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -60,7 +60,7 @@ export default `
       border-top: 1px solid #e3eae3;
       border-bottom: 1px solid #e3eae3;
       background: #e3eae3;
-      padding: 0 35px 0 18px;
+      padding: 0 54px 0 18px;
       min-height: 130px;
 
       .block-style {
