@@ -41,7 +41,7 @@ export default `
       background: #00524e;
       color: rgb(246,
       246, 246);
-      padding: 0 54px 0 18px;
+      padding: 0 54px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -60,7 +60,7 @@ export default `
       border-top: 1px solid #e3eae3;
       border-bottom: 1px solid #e3eae3;
       background: #e3eae3;
-      padding: 0 54px 0 18px;
+      padding: 0 54px;
       min-height: 130px;
 
       .block-style {
