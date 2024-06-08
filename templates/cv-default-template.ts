@@ -25,6 +25,7 @@ export default `
       width: 192px;
       border-radius: 50%;
       border: 5px solid #00524e;
+      overflow: hidden;
     }
   
     .cv-template-header__image img {
