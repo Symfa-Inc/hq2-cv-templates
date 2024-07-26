@@ -193,6 +193,18 @@ export default `
       font-size: 14px;
       margin-top: 6px;
     }
+
+    @media print {
+      @page {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      @page :first {
+        margin-top: 0px;
+      }
+    }
+
   </style>
 </head>
 <body style="margin: 0">
