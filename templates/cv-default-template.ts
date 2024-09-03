@@ -39,7 +39,7 @@ export default `
     }
 
     .cv-template-header__top {
-      background: #00524e;
+      background: {{mainColor}};
       color: rgb(246,
       246, 246);
       padding: 0 54px;
@@ -60,7 +60,7 @@ export default `
     .cv-template-header__bottom {
       border-top: 1px solid #e3eae3;
       border-bottom: 1px solid #e3eae3;
-      background: #e3eae3;
+      background: {{mainColor}}10;
       padding: 0 54px;
       min-height: 130px;
 
