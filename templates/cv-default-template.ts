@@ -140,7 +140,7 @@ export default `
     .cv-template-block__name {
       font-size: 18px;
       font-weight: bold;
-      color: #00524e;
+      color: {{mainColor}};
       margin-bottom: 8px;
       text-transform: uppercase;
       letter-spacing: 0.7px;
