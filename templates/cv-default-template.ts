@@ -101,14 +101,6 @@ export default `
       > p,
       > table {
         margin: 1em 0;
-        
-        &:first-child {
-          margin-top: 0;
-        }
-        
-        &:last-child {
-          margin-bottom: 0;
-        }
       }
 
       table {
