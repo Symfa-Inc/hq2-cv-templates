@@ -116,6 +116,8 @@ export default `
         border-collapse: collapse;
 
         td {
+          vertical-align: top;
+
           p {
             margin: 1em 0;
         
