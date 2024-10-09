@@ -24,7 +24,7 @@ export default `
       height: 192px;
       width: 192px;
       border-radius: 50%;
-      border: 5px solid #00524e;
+      border: 5px solid {{mainColor}};
       overflow: hidden;
     }
   
