@@ -24,7 +24,7 @@ export default `
       height: 192px;
       width: 192px;
       border-radius: 50%;
-      border: 5px solid #00524e;
+      border: 5px solid {{mainColor}};
       overflow: hidden;
     }
   
@@ -108,8 +108,18 @@ export default `
         border-collapse: collapse;
 
         td {
+          vertical-align: top;
+
           p {
-            margin: 0 auto;
+            margin: 1em 0;
+        
+            &:first-child {
+              margin-top: 0;
+            }
+            
+            &:last-child {
+              margin-bottom: 0;
+            }
           }
         }
       }
