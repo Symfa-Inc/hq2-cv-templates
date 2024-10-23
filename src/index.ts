@@ -11,7 +11,7 @@ handlebars.registerHelper('isActiveItems', function(this: unknown, context, opti
   for (let i = 0; i < context.length; i++) {
     if (context[i].active) {
       if (subItemsField) {
-        if (Array.isArray(context[i][subItemsField]) && context[i][subItemsField].length) {
+        if (typeof context[i][subItemsField] === 'string' && context[i][subItemsField].length) {
           return options.fn(this);
         }
       } else {
