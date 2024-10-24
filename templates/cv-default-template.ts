@@ -273,10 +273,8 @@ export default `
       {{#if this.active}}
       {{#if this.skillName.length}}
         <div class='cv-template-block__subname'>{{this.skillFamily}}</div>
-        <div class='cv-template-block__list'>
-          {{#each this.skillName}}
-            <div class='cv-template-block__item'>{{this}}</div>
-          {{/each}}
+        <div class='cv-template-block__desc'>
+          <div class='cv-template-block-style'><p>{{this.skillName}}</p></div>
         </div>
       {{/if}}
       {{/if}}
