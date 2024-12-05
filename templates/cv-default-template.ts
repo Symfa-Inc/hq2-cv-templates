@@ -171,6 +171,8 @@ export default `
       padding: 5px 8px;
       border-radius: 5px;
       font-size: 14px;
+      word-wrap: break-word;
+      word-break: break-all;
     }
 
     .cv-template-block-language {
