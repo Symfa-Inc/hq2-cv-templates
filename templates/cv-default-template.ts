@@ -7,7 +7,7 @@ export default `
     .cv-template {
       width: 210mm; 
       min-height: 297mm; 
-      font-family: Helvetica; 
+      font-family: Aeonik; 
       color: rgb(25, 25, 25); 
       background-color: white; 
       padding-bottom: 1px;
