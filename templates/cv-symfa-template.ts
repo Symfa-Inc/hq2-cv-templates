@@ -241,7 +241,7 @@ export default `
     }
   </style>
 </head>
-<body>
+<body data-template="symfa">
   <div class='cv-template'>
     <div class='cv-template-first-page'>
       <div class='cv-template-first-page__content'>
