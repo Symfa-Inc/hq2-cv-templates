@@ -3,7 +3,6 @@ export default `
 <head>
     <meta charset='UTF-8'>
     <title>CV Symfa Template</title>
-    <link rel="stylesheet" href="/dist/fonts/fonts.css">
     <style>
         body {
             margin: 0;
