@@ -1,5 +1,6 @@
 import handlebars from 'handlebars';
-import defaultTemplate from '../templates/cv-default-template';
+import classicTemplate from '../templates/cv-classic-template';
+import symfaTemplate from '../templates/cv-symfa-template';
 
 handlebars.registerHelper('isActiveItems', function(this: unknown, context, options) {
   if (!context || !context.length) {
@@ -37,10 +38,14 @@ handlebars.registerHelper('ifNot', function(this: unknown, v1, v2, options) {
 });
 
 enum Templates {
-  Default,
+  Classic = 1,
+  Symfa,
 }
 
-const templatesMapper: {[key in Templates]: string} = { [Templates.Default]: defaultTemplate};
+const templatesMapper: {[key in Templates]: string} = {
+  [Templates.Classic]: classicTemplate,
+  [Templates.Symfa]: symfaTemplate,
+};
 
 function getHTMLTemplate(params: unknown, template: Templates) {
   return handlebars.compile(templatesMapper[template])(params);
