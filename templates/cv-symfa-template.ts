@@ -3,6 +3,7 @@ export default `
 <head>
     <meta charset='UTF-8'>
     <title>CV Symfa Template</title>
+    <link rel="stylesheet" href="/dist/fonts/fonts.css">
     <style>
         body {
             margin: 0;
@@ -11,7 +12,7 @@ export default `
 
         .cv-template {
             width: 595px;
-            font-family: Aeonik;
+            font-family: 'A', sans-serif;
             font-weight: 500;
             color: #191919;
             background-color: white;
