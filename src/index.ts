@@ -37,7 +37,7 @@ handlebars.registerHelper('ifNot', function(this: unknown, v1, v2, options) {
   return options.inverse(this);
 });
 
-Handlebars.registerHelper('or', function (this: unknown, a, b, options) {
+handlebars.registerHelper('or', function (this: unknown, a, b, options) {
   if (a || b) {
     return options.fn(this);
   }
