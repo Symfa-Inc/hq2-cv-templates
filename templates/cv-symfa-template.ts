@@ -45,7 +45,7 @@ export default `
       @media not print {
         .cv-template {
           > div {
-            height: 297mm; 
+            min-height: 297mm; 
           }
         }
       }
@@ -69,12 +69,10 @@ export default `
         }
       }
 
-      
-
       @media not print {
         .cv-template-work-experience-page {
           .cv-template-section {
-            height: 297mm; 
+            min-height: 297mm; 
           }
         }
       }
@@ -341,7 +339,7 @@ export default `
     
     {{#isActiveItems experiences}}
       <div class="cv-template-work-experience-page">
-        <div class="cv-template-fixed-header" id="fixedHeader">
+        <div class="cv-template-fixed-header">
           <div class="cv-template-fixed-header__info">
             <span>
               {{#if employeeFirstNameActive}}
@@ -358,7 +356,7 @@ export default `
           </div>
           <div class="cv-template-fixed-header__company"><a href="{{companyUrl}}" title="{{companyName}}">{{companyName}}</a></div>
         </div>
-        <div class="cv-template-section" id="work-experience">
+        <div class="cv-template-section">
           <div class="cv-template-section__title">WORK EXPERIENCE</div>
           <div class="cv-template-section__list">
             {{#each experiences}}
@@ -373,66 +371,5 @@ export default `
       </div>
     {{/isActiveItems}}
   </div>
-  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-  <script>
-    $(function(){
-      const pageHeight = 1123;
-      const fixedHeader = $('#fixedHeader');
-      const experiences = $('#work-experience');
-      const items = [];
-      let offset = 51 + fixedHeader.outerHeight(true);
-      let index = 0;
-
-      experiences.each(function(i, el){
-        const block = $(this).find(".cv-template-block-experience");
-
-        block.each(function(i, el) {
-          if (offset >= pageHeight) {
-            offset = 51 + fixedHeader.outerHeight(true);
-            index += 1;
-            items.push([]);
-            items[index].push(el);
-          } else {
-            if (Array.isArray(items[index])) {
-              items[index].push(el);
-            } else {
-              items.push([]);
-              items[index].push(el);
-            }
-          }
-
-          offset += $(el).find('table').outerHeight(true);
-        });
-
-
-        $(this).remove();
-      });
-
-      items.reverse().forEach(function(els, index){
-        const workExperienceSection = $('<div>', {
-            class: 'cv-template-section',
-        });
-
-        const sectionTitle = $('<div>', {
-            class: 'cv-template-section__title',
-            text: 'WORK EXPERIENCE'
-        });
-
-        const sectionList = $('<div>', {
-            class: 'cv-template-section__list'
-        });
-
-        sectionList.append(els);
-        
-        workExperienceSection.append(sectionTitle, sectionList);
-
-        fixedHeader.after(workExperienceSection);
-
-        if (index > 0) {
-          workExperienceSection.after(fixedHeader.clone());
-        }
-      });
-    });
-  </script>
 </body>
 </html>`;
