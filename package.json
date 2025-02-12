@@ -1,6 +1,6 @@
 {
   "name": "@wellyes/cv-templates",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "CV templates module",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
