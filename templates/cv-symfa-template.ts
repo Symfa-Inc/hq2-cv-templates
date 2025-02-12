@@ -1,7 +1,7 @@
 export default `
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
+    <meta charset='UTF-8'>
     <title>CV Symfa Template</title>
     <style>
         body {
@@ -146,86 +146,86 @@ export default `
     </style>
 </head>
 <body>
-    <div class="cv-template">
-        <div class="cv-template-first-page">
-            <div class="cv-template-first-page__content">
-                <div class="cv-template-position">Software Developer</div>
-                <div class="cv-template-name">Alison R.</div>
-                <div class="cv-template-overview ">
-                    <div class="cv-template-block-style"><p>.NET Developer with experience in building, maintaining, and optimizing scalable applications. Proficient in designing robust solutions with a strong focus on code quality, performance,  and user experience. Skilled in troubleshooting and resolving technical issues to enhance system functionality and reliability</p></div>
+    <div class='cv-template'>
+        <div class='cv-template-first-page'>
+            <div class='cv-template-first-page__content'>
+                <div class='cv-template-position'>Software Developer</div>
+                <div class='cv-template-name'>Alison R.</div>
+                <div class='cv-template-overview '>
+                    <div class='cv-template-block-style'><p>.NET Developer with experience in building, maintaining, and optimizing scalable applications. Proficient in designing robust solutions with a strong focus on code quality, performance,  and user experience. Skilled in troubleshooting and resolving technical issues to enhance system functionality and reliability</p></div>
                 </div>
             </div>
-            <div class="cv-template-first-page__photo">
-                <div class="cv-template-first-page__logo">
-                    <a href="#"><img src="logo.png" alt="" /></a>
+            <div class='cv-template-first-page__photo'>
+                <div class='cv-template-first-page__logo'>
+                    <a href='#'><img src='logo.png' alt='' /></a>
                 </div>
-                <div class="cv-template-first-page__avatar">
-                    <img src="/Frame%205806.png" alt="" />
+                <div class='cv-template-first-page__avatar'>
+                    <img src='/Frame%205806.png' alt='' />
                 </div>
             </div>
-            <div class="cv-template-first-page__tools">
-                <div class="cv-template-section">
-                    <div class="cv-template-section__title">TECHNOLOGIES AND TOOLS</div>
-                    <div class="cv-template-section__list">
-                        <div class="cv-template-content">
-                            <div class="cv-template-content__title">Main skills:</div>
-                            <div class="cv-template-content__value">C#, SQL, TypeScript, JavaScript, React, ASP.NET, .NET</div>
+            <div class='cv-template-first-page__tools'>
+                <div class='cv-template-section'>
+                    <div class='cv-template-section__title'>TECHNOLOGIES AND TOOLS</div>
+                    <div class='cv-template-section__list'>
+                        <div class='cv-template-content'>
+                            <div class='cv-template-content__title'>Main skills:</div>
+                            <div class='cv-template-content__value'>C#, SQL, TypeScript, JavaScript, React, ASP.NET, .NET</div>
                         </div>
-                        <div class="cv-template-content">
-                            <div class="cv-template-content__title">Framework:</div>
-                            <div class="cv-template-content__value">.NET Core, .NET, Umbraco CMS, NopCommerce CMS</div>
+                        <div class='cv-template-content'>
+                            <div class='cv-template-content__title'>Framework:</div>
+                            <div class='cv-template-content__value'>.NET Core, .NET, Umbraco CMS, NopCommerce CMS</div>
                         </div>
-                        <div class="cv-template-content">
-                            <div class="cv-template-content__title">Technologies:</div>
-                            <div class="cv-template-content__value">HTML, CSS/SCSS, Angular, React, JQuery, Azure Service fabric, RabbitMQ, LINQ, Entity Framework</div>
+                        <div class='cv-template-content'>
+                            <div class='cv-template-content__title'>Technologies:</div>
+                            <div class='cv-template-content__value'>HTML, CSS/SCSS, Angular, React, JQuery, Azure Service fabric, RabbitMQ, LINQ, Entity Framework</div>
                         </div>
-                        <div class="cv-template-content">
-                            <div class="cv-template-content__title">Databases:</div>
-                            <div class="cv-template-content__value">Microsoft SQL Server, MongoDB</div>
+                        <div class='cv-template-content'>
+                            <div class='cv-template-content__title'>Databases:</div>
+                            <div class='cv-template-content__value'>Microsoft SQL Server, MongoDB</div>
                         </div>
-                        <div class="cv-template-content">
-                            <div class="cv-template-content__title">Software development processes and methodologies:</div>
-                            <div class="cv-template-content__value">Agile-like (Scrum), Jira</div>
+                        <div class='cv-template-content'>
+                            <div class='cv-template-content__title'>Software development processes and methodologies:</div>
+                            <div class='cv-template-content__value'>Agile-like (Scrum), Jira</div>
                         </div>
-                        <div class="cv-template-content">
-                            <div class="cv-template-content__title">Tools and Middleware:</div>
-                            <div class="cv-template-content__value">Visual Studio (Resharper), Visual Studio Code/WebStorm,  Microsoft SQL Management Studio Postman</div>
+                        <div class='cv-template-content'>
+                            <div class='cv-template-content__title'>Tools and Middleware:</div>
+                            <div class='cv-template-content__value'>Visual Studio (Resharper), Visual Studio Code/WebStorm,  Microsoft SQL Management Studio Postman</div>
                         </div>
-                        <div class="cv-template-content">
-                            <div class="cv-template-content__title">Operating Systems:</div>
-                            <div class="cv-template-content__value">Windows 7 and higher</div>
+                        <div class='cv-template-content'>
+                            <div class='cv-template-content__title'>Operating Systems:</div>
+                            <div class='cv-template-content__value'>Windows 7 and higher</div>
                         </div>
-                        <div class="cv-template-content">
-                            <div class="cv-template-content__title">Version control systems:</div>
-                            <div class="cv-template-content__value">Git, SVN</div>
+                        <div class='cv-template-content'>
+                            <div class='cv-template-content__title'>Version control systems:</div>
+                            <div class='cv-template-content__value'>Git, SVN</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="cv-template-first-page__general">
-                <div class="cv-template-section">
-                    <div class="cv-template-section__title">GENERAL</div>
-                    <div class="cv-template-section__list">
-                        <div class="cv-template-content">
-                            <div class="cv-template-content__title">Education</div>
-                            <div class="cv-template-content__value">Bachelor's Degree</div>
+            <div class='cv-template-first-page__general'>
+                <div class='cv-template-section'>
+                    <div class='cv-template-section__title'>GENERAL</div>
+                    <div class='cv-template-section__list'>
+                        <div class='cv-template-content'>
+                            <div class='cv-template-content__title'>Education</div>
+                            <div class='cv-template-content__value'>Bachelor's Degree</div>
                         </div>
-                        <div class="cv-template-content">
-                            <div class="cv-template-content__title">Languages</div>
-                            <div class="cv-template-content__list">
-                                <div class="cv-template-content">
-                                    <div class="cv-template-content__title no-margin">English</div>
-                                    <div class="cv-template-content__value">Upper Intermediate (B2)</div>
+                        <div class='cv-template-content'>
+                            <div class='cv-template-content__title'>Languages</div>
+                            <div class='cv-template-content__list'>
+                                <div class='cv-template-content'>
+                                    <div class='cv-template-content__title no-margin'>English</div>
+                                    <div class='cv-template-content__value'>Upper Intermediate (B2)</div>
                                 </div>
-                                <div class="cv-template-content">
-                                    <div class="cv-template-content__title no-margin">French</div>
-                                    <div class="cv-template-content__value">Upper Intermediate (B2)</div>
+                                <div class='cv-template-content'>
+                                    <div class='cv-template-content__title no-margin'>French</div>
+                                    <div class='cv-template-content__value'>Upper Intermediate (B2)</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="cv-template-content">
-                            <div class="cv-template-content__title">Time Zone</div>
-                            <div class="cv-template-content__value">
+                        <div class='cv-template-content'>
+                            <div class='cv-template-content__title'>Time Zone</div>
+                            <div class='cv-template-content__value'>
                                 <p>GMT+1</p>
                                 <p>Cross hours:</p>
                                 <p>9:00 am - 1:00 pm (UTC -5)</p>
