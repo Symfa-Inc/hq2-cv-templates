@@ -91,6 +91,10 @@ export default `
 
       .cv-template-first-page__logo {
         text-align: right;
+        
+        img {
+          max-height: 32px;
+        }
       }
 
       .cv-template-first-page__avatar {
