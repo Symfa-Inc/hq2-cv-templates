@@ -50,18 +50,9 @@ export default `
         grid-column-gap: 20px;
         border-top: 8px solid #07524E;
       }
-
       
       .cv-template-work-experience-page {
-        padding: 0 24px;
-      }
-
-      @media not print {
-        .cv-template-work-experience-page {
-          .cv-template-section {
-            min-height: 297mm; 
-          }
-        }
+        padding: 24px;
       }
 
       .cv-template-first-page__photo {
@@ -207,28 +198,6 @@ export default `
         }
       }
     }
-
-    .cv-template-fixed-header {
-      display: flex;
-      justify-content: space-between;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 14.4px;
-      letter-spacing: 0;
-      color: #858585;
-      padding: 16px 0;
-      gap: 10px;
-
-      a {
-        color: #858585;
-        text-decoration: none;;
-      }
-    }
-
-    .cv-template-fixed-header__info {
-      display: flex;
-      gap: 10px;
-    }
   </style>
 </head>
 <body data-template="symfa">
@@ -289,6 +258,15 @@ export default `
         <div class='cv-template-section'>
           <div class='cv-template-section__title'>GENERAL</div>
           <div class='cv-template-section__list'>
+          
+            {{#if expertises.active}}
+              {{#if expertises.items.length}}
+                <div class='cv-template-content'>
+                  <div class='cv-template-content__title'>Areas of Expertise</div>
+                  <div class='cv-template-content__list'>{{#each expertises.items}}{{#if @index}}, {{/if}}{{this}}{{/each}}</div>
+                </div>
+              {{/if}}
+            {{/if}}
           
             {{#isActiveItems languages}}
               <div class='cv-template-content'>
@@ -368,23 +346,6 @@ export default `
     
     {{#isActiveItems experiences}}
       <div class="cv-template-work-experience-page">
-        <div class="cv-template-fixed-header">
-          <div class="cv-template-fixed-header__info">
-            <span>
-              {{#if employeeFirstNameActive}}
-                {{employeeFirstName}}
-              {{/if}}
-              {{#if employeeLastNameActive}}
-                {{employeeLastName}}
-              {{/if}}
-            </span>
-            {{#or employeeFirstNameActive employeeLastNameActive}}
-            <span>|</span>
-            {{/or}}
-            <span>{{positionName}}</span>
-          </div>
-          <div class="cv-template-fixed-header__company"><a href="{{companyUrl}}" title="{{companyName}}">{{companyName}}</a></div>
-        </div>
         <div class="cv-template-section">
           <div class="cv-template-section__title">WORK EXPERIENCE</div>
           <div class="cv-template-section__list">
