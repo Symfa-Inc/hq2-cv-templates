@@ -42,31 +42,18 @@ export default `
         letter-spacing: 0;
       }
 
-      @media not print {
-        .cv-template {
-          > div {
-            min-height: 297mm; 
-          }
-        }
-      }
-
       .cv-template-first-page {
         display: grid;
         padding: 24px;
         grid-template-columns: 1fr 168px;
         grid-template-rows: repeat(2, min-content);
         grid-column-gap: 20px;
-        break-after: page;
         border-top: 8px solid #07524E;
       }
 
       
       .cv-template-work-experience-page {
         padding: 0 24px;
-
-        .cv-template-section {
-          break-after: page;
-        }
       }
 
       @media not print {
@@ -181,13 +168,13 @@ export default `
       }
 
       .cv-template-content + .cv-template-content{
-        margin-top: 10px;
+        margin-top: 20px;
       }
 
       .cv-template-content__title {
         font-size: 12px;
         line-height: 14.4px;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
       }
 
       .cv-template-content__title.no-margin {
@@ -207,7 +194,6 @@ export default `
     .cv-template-block-experience {
       font-weight: 400;
       width: 100%;
-      break-inside: avoid-page;
 
       .block-style {
         margin: 30px 0;
@@ -303,15 +289,7 @@ export default `
         <div class='cv-template-section'>
           <div class='cv-template-section__title'>GENERAL</div>
           <div class='cv-template-section__list'>
-            {{#if education.active}}
-              {{#if education.description}}
-                <div class='cv-template-content'>
-                  <div class='cv-template-content__title'>Education</div>
-                  <div class='cv-template-content__value'>{{{education.description}}}</div>
-                </div>
-              {{/if}}
-            {{/if}}
-            
+          
             {{#isActiveItems languages}}
               <div class='cv-template-content'>
                 <div class='cv-template-content__title'>Languages</div>
@@ -329,6 +307,51 @@ export default `
                 </div>
               </div>
             {{/isActiveItems}}
+          
+            {{#if certificates.active}}
+              {{#if certificates.description}}
+                <div class='cv-template-content'>
+                  <div class='cv-template-content__title'>Certificates</div>
+                  <div class='cv-template-content__value'>{{{certificates.description}}}</div>
+                </div>
+              {{/if}}
+            {{/if}}
+            
+            {{#if awards.active}}
+              {{#if awards.description}}
+                <div class='cv-template-content'>
+                  <div class='cv-template-content__title'>Awards</div>
+                  <div class='cv-template-content__value'>{{{awards.description}}}</div>
+                </div>
+              {{/if}}
+            {{/if}}
+            
+            {{#if publications.active}}
+              {{#if publications.description}}
+                <div class='cv-template-content'>
+                  <div class='cv-template-content__title'>Publications</div>
+                  <div class='cv-template-content__value'>{{{publications.description}}}</div>
+                </div>
+              {{/if}}
+            {{/if}}
+            
+            {{#if courses.active}}
+              {{#if courses.description}}
+                <div class='cv-template-content'>
+                  <div class='cv-template-content__title'>Courses</div>
+                  <div class='cv-template-content__value'>{{{courses.description}}}</div>
+                </div>
+              {{/if}}
+            {{/if}}
+          
+            {{#if education.active}}
+              {{#if education.description}}
+                <div class='cv-template-content'>
+                  <div class='cv-template-content__title'>Education</div>
+                  <div class='cv-template-content__value'>{{{education.description}}}</div>
+                </div>
+              {{/if}}
+            {{/if}}
             
             {{#if timezones.active}}
               {{#if timezones.description}}
