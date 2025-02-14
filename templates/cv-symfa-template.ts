@@ -263,7 +263,7 @@ export default `
               {{#if expertises.items.length}}
                 <div class='cv-template-content'>
                   <div class='cv-template-content__title'>Areas of Expertise</div>
-                  <div class='cv-template-content__list'>{{#each expertises.items}}{{#if @index}}, {{/if}}{{this}}{{/each}}</div>
+                  <div class='cv-template-content__list'>{{#each expertises.items}}{{#if @index}}, {{/if}}{{this.expertiseName}}{{/each}}</div>
                 </div>
               {{/if}}
             {{/if}}
