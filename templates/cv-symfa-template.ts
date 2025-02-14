@@ -42,39 +42,17 @@ export default `
         letter-spacing: 0;
       }
 
-      @media not print {
-        .cv-template {
-          > div {
-            min-height: 297mm; 
-          }
-        }
-      }
-
       .cv-template-first-page {
         display: grid;
         padding: 24px;
         grid-template-columns: 1fr 168px;
         grid-template-rows: repeat(2, min-content);
         grid-column-gap: 20px;
-        break-after: page;
         border-top: 8px solid #07524E;
       }
-
       
       .cv-template-work-experience-page {
-        padding: 0 24px;
-
-        .cv-template-section {
-          break-after: page;
-        }
-      }
-
-      @media not print {
-        .cv-template-work-experience-page {
-          .cv-template-section {
-            min-height: 297mm; 
-          }
-        }
+        padding: 24px;
       }
 
       .cv-template-first-page__photo {
@@ -181,13 +159,13 @@ export default `
       }
 
       .cv-template-content + .cv-template-content{
-        margin-top: 10px;
+        margin-top: 20px;
       }
 
       .cv-template-content__title {
         font-size: 12px;
         line-height: 14.4px;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
       }
 
       .cv-template-content__title.no-margin {
@@ -207,7 +185,6 @@ export default `
     .cv-template-block-experience {
       font-weight: 400;
       width: 100%;
-      break-inside: avoid-page;
 
       .block-style {
         margin: 30px 0;
@@ -220,28 +197,6 @@ export default `
           margin-top: 0;
         }
       }
-    }
-
-    .cv-template-fixed-header {
-      display: flex;
-      justify-content: space-between;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 14.4px;
-      letter-spacing: 0;
-      color: #858585;
-      padding: 16px 0;
-      gap: 10px;
-
-      a {
-        color: #858585;
-        text-decoration: none;;
-      }
-    }
-
-    .cv-template-fixed-header__info {
-      display: flex;
-      gap: 10px;
     }
   </style>
 </head>
@@ -303,15 +258,16 @@ export default `
         <div class='cv-template-section'>
           <div class='cv-template-section__title'>GENERAL</div>
           <div class='cv-template-section__list'>
-            {{#if education.active}}
-              {{#if education.description}}
+          
+            {{#if expertises.active}}
+              {{#if expertises.items.length}}
                 <div class='cv-template-content'>
-                  <div class='cv-template-content__title'>Education</div>
-                  <div class='cv-template-content__value'>{{{education.description}}}</div>
+                  <div class='cv-template-content__title'>Areas of Expertise</div>
+                  <div class='cv-template-content__value'>{{#each expertises.items}}{{#if @index}}, {{/if}}{{this.expertiseName}}{{/each}}</div>
                 </div>
               {{/if}}
             {{/if}}
-            
+          
             {{#isActiveItems languages}}
               <div class='cv-template-content'>
                 <div class='cv-template-content__title'>Languages</div>
@@ -329,6 +285,51 @@ export default `
                 </div>
               </div>
             {{/isActiveItems}}
+          
+            {{#if certificates.active}}
+              {{#if certificates.description}}
+                <div class='cv-template-content'>
+                  <div class='cv-template-content__title'>Certificates</div>
+                  <div class='cv-template-content__value'>{{{certificates.description}}}</div>
+                </div>
+              {{/if}}
+            {{/if}}
+            
+            {{#if awards.active}}
+              {{#if awards.description}}
+                <div class='cv-template-content'>
+                  <div class='cv-template-content__title'>Awards</div>
+                  <div class='cv-template-content__value'>{{{awards.description}}}</div>
+                </div>
+              {{/if}}
+            {{/if}}
+            
+            {{#if publications.active}}
+              {{#if publications.description}}
+                <div class='cv-template-content'>
+                  <div class='cv-template-content__title'>Publications</div>
+                  <div class='cv-template-content__value'>{{{publications.description}}}</div>
+                </div>
+              {{/if}}
+            {{/if}}
+            
+            {{#if courses.active}}
+              {{#if courses.description}}
+                <div class='cv-template-content'>
+                  <div class='cv-template-content__title'>Courses</div>
+                  <div class='cv-template-content__value'>{{{courses.description}}}</div>
+                </div>
+              {{/if}}
+            {{/if}}
+          
+            {{#if education.active}}
+              {{#if education.description}}
+                <div class='cv-template-content'>
+                  <div class='cv-template-content__title'>Education</div>
+                  <div class='cv-template-content__value'>{{{education.description}}}</div>
+                </div>
+              {{/if}}
+            {{/if}}
             
             {{#if timezones.active}}
               {{#if timezones.description}}
@@ -345,23 +346,6 @@ export default `
     
     {{#isActiveItems experiences}}
       <div class="cv-template-work-experience-page">
-        <div class="cv-template-fixed-header">
-          <div class="cv-template-fixed-header__info">
-            <span>
-              {{#if employeeFirstNameActive}}
-                {{employeeFirstName}}
-              {{/if}}
-              {{#if employeeLastNameActive}}
-                {{employeeLastName}}
-              {{/if}}
-            </span>
-            {{#or employeeFirstNameActive employeeLastNameActive}}
-            <span>|</span>
-            {{/or}}
-            <span>{{positionName}}</span>
-          </div>
-          <div class="cv-template-fixed-header__company"><a href="{{companyUrl}}" title="{{companyName}}">{{companyName}}</a></div>
-        </div>
         <div class="cv-template-section">
           <div class="cv-template-section__title">WORK EXPERIENCE</div>
           <div class="cv-template-section__list">
