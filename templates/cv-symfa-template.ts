@@ -48,7 +48,7 @@ export default `
         grid-template-columns: 1fr 168px;
         grid-template-rows: repeat(2, min-content);
         grid-column-gap: 20px;
-        border-top: 8px solid #07524E;
+        border-top: 8px solid {{mainColor}};
       }
       
       .cv-template-work-experience-page {
@@ -72,6 +72,8 @@ export default `
         
         img {
           max-height: 32px;
+          color: {{mainColor}};
+          background-color: {{mainColor}};
         }
       }
 
