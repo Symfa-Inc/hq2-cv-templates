@@ -72,8 +72,6 @@ export default `
         
         img {
           max-height: 32px;
-          color: {{mainColor}};
-          background-color: {{mainColor}};
         }
       }
 
