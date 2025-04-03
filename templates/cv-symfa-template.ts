@@ -198,6 +198,17 @@ export default `
         }
       }
     }
+
+    @media print {
+      @page {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      @page :first {
+        margin-top: 0px;
+      }
+    }
   </style>
 </head>
 <body data-template="symfa">
