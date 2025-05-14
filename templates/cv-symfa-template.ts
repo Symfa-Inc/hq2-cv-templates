@@ -185,6 +185,7 @@ export default `
     .cv-template-block-experience {
       font-weight: 400;
       width: 100%;
+      margin-bottom: 22px;
 
       .block-style {
         margin: 30px 0;
