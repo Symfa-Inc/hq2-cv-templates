@@ -30,8 +30,9 @@ export default `
   
     .cv-template-header__image img {
       display: block;
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .cv-template-header__image ~ .cv-template-header__top, .cv-template-header__image ~ .cv-template-header__bottom {
